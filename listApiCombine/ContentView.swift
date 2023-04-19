@@ -12,10 +12,17 @@ struct ContentView: View {
     
     @ObservedObject var UserManager = userManager()
     @State private var searchText = ""
+    var searchResults: [User] {
+            if searchText.isEmpty {
+                return UserManager.users
+            } else {
+                return UserManager.users.filter { $0.last_name.contains(searchText) || $0.first_name.contains(searchText) || $0.email.contains(searchText)}
+            }
+        }
     
     var body: some View {
         NavigationStack{
-            List(UserManager.users, id: \.id , rowContent: { u in
+            List(searchResults, id: \.id , rowContent: { u in
                 rowCell(email: u.email, first_name: u.first_name, last_name: u.last_name, avatar: u.avatar)
             })
             .onAppear {
@@ -23,6 +30,8 @@ struct ContentView: View {
             }
             .padding()
         }
+        .searchable(text: $searchText)
+
     }
 }
 

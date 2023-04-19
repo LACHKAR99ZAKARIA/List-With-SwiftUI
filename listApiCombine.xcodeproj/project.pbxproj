@@ -14,6 +14,13 @@
 		13AA9DF129EED78800C5B569 /* listApiCombineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13AA9DF029EED78800C5B569 /* listApiCombineTests.swift */; };
 		13AA9DFB29EED78800C5B569 /* listApiCombineUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13AA9DFA29EED78800C5B569 /* listApiCombineUITests.swift */; };
 		13AA9DFD29EED78800C5B569 /* listApiCombineUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13AA9DFC29EED78800C5B569 /* listApiCombineUITestsLaunchTests.swift */; };
+		13AA9E0A29EED7D900C5B569 /* rowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13AA9E0929EED7D900C5B569 /* rowCell.swift */; };
+		13AA9E0F29EEDE2900C5B569 /* usersManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13AA9E0E29EEDE2900C5B569 /* usersManager.swift */; };
+		13AA9E1129EEDE3E00C5B569 /* userData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13AA9E1029EEDE3E00C5B569 /* userData.swift */; };
+		13BA7FF729EFF18700AA68BA /* URLImage in Frameworks */ = {isa = PBXBuildFile; productRef = 13BA7FF629EFF18700AA68BA /* URLImage */; };
+		13BA7FF929EFF18700AA68BA /* URLImageStore in Frameworks */ = {isa = PBXBuildFile; productRef = 13BA7FF829EFF18700AA68BA /* URLImageStore */; };
+		13BA7FFB29F009D200AA68BA /* searshItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13BA7FFA29F009D200AA68BA /* searshItem.swift */; };
+		13BA7FFD29F00CFB00AA68BA /* searshBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13BA7FFC29F00CFB00AA68BA /* searshBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +51,11 @@
 		13AA9DF629EED78800C5B569 /* listApiCombineUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = listApiCombineUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		13AA9DFA29EED78800C5B569 /* listApiCombineUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = listApiCombineUITests.swift; sourceTree = "<group>"; };
 		13AA9DFC29EED78800C5B569 /* listApiCombineUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = listApiCombineUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		13AA9E0929EED7D900C5B569 /* rowCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rowCell.swift; sourceTree = "<group>"; };
+		13AA9E0E29EEDE2900C5B569 /* usersManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = usersManager.swift; sourceTree = "<group>"; };
+		13AA9E1029EEDE3E00C5B569 /* userData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = userData.swift; sourceTree = "<group>"; };
+		13BA7FFA29F009D200AA68BA /* searshItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = searshItem.swift; sourceTree = "<group>"; };
+		13BA7FFC29F00CFB00AA68BA /* searshBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = searshBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +63,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13BA7FF929EFF18700AA68BA /* URLImageStore in Frameworks */,
+				13BA7FF729EFF18700AA68BA /* URLImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,10 +108,14 @@
 		13AA9DDE29EED78200C5B569 /* listApiCombine */ = {
 			isa = PBXGroup;
 			children = (
+				13AA9E0C29EEDCC300C5B569 /* Model */,
+				13AA9E0D29EEDDE600C5B569 /* View */,
 				13AA9DDF29EED78200C5B569 /* listApiCombineApp.swift */,
 				13AA9DE129EED78200C5B569 /* ContentView.swift */,
+				13AA9E0929EED7D900C5B569 /* rowCell.swift */,
 				13AA9DE329EED78700C5B569 /* Assets.xcassets */,
 				13AA9DE529EED78700C5B569 /* Preview Content */,
+				13BA7FFC29F00CFB00AA68BA /* searshBar.swift */,
 			);
 			path = listApiCombine;
 			sourceTree = "<group>";
@@ -127,6 +145,23 @@
 			path = listApiCombineUITests;
 			sourceTree = "<group>";
 		};
+		13AA9E0C29EEDCC300C5B569 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				13AA9E0E29EEDE2900C5B569 /* usersManager.swift */,
+				13AA9E1029EEDE3E00C5B569 /* userData.swift */,
+				13BA7FFA29F009D200AA68BA /* searshItem.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		13AA9E0D29EEDDE600C5B569 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +178,10 @@
 			dependencies = (
 			);
 			name = listApiCombine;
+			packageProductDependencies = (
+				13BA7FF629EFF18700AA68BA /* URLImage */,
+				13BA7FF829EFF18700AA68BA /* URLImageStore */,
+			);
 			productName = listApiCombine;
 			productReference = 13AA9DDC29EED78200C5B569 /* listApiCombine.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +254,9 @@
 				Base,
 			);
 			mainGroup = 13AA9DD329EED78200C5B569;
+			packageReferences = (
+				13BA7FF529EFF18700AA68BA /* XCRemoteSwiftPackageReference "url-image" */,
+			);
 			productRefGroup = 13AA9DDD29EED78200C5B569 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -257,7 +299,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13BA7FFB29F009D200AA68BA /* searshItem.swift in Sources */,
+				13BA7FFD29F00CFB00AA68BA /* searshBar.swift in Sources */,
 				13AA9DE229EED78200C5B569 /* ContentView.swift in Sources */,
+				13AA9E0A29EED7D900C5B569 /* rowCell.swift in Sources */,
+				13AA9E0F29EEDE2900C5B569 /* usersManager.swift in Sources */,
+				13AA9E1129EEDE3E00C5B569 /* userData.swift in Sources */,
 				13AA9DE029EED78200C5B569 /* listApiCombineApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -577,6 +624,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		13BA7FF529EFF18700AA68BA /* XCRemoteSwiftPackageReference "url-image" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/dmytro-anokhin/url-image.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		13BA7FF629EFF18700AA68BA /* URLImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 13BA7FF529EFF18700AA68BA /* XCRemoteSwiftPackageReference "url-image" */;
+			productName = URLImage;
+		};
+		13BA7FF829EFF18700AA68BA /* URLImageStore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 13BA7FF529EFF18700AA68BA /* XCRemoteSwiftPackageReference "url-image" */;
+			productName = URLImageStore;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 13AA9DD429EED78200C5B569 /* Project object */;
 }

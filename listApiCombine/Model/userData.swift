@@ -13,7 +13,7 @@ struct Results :  Decodable {
     let data : [User]
 }
 
-struct User: Decodable, Identifiable {
+class User: Decodable, Identifiable {
     var id : Int
     var email : String
     var first_name : String
