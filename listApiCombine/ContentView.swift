@@ -6,16 +6,23 @@
 //
 
 import SwiftUI
+import URLImage
 
 struct ContentView: View {
+    
+    @ObservedObject var UserManager = userManager()
+    @State private var searchText = ""
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        NavigationStack{
+            List(UserManager.users, id: \.id , rowContent: { u in
+                rowCell(email: u.email, first_name: u.first_name, last_name: u.last_name, avatar: u.avatar)
+            })
+            .onAppear {
+                self.UserManager.fetchNextPage()
+            }
+            .padding()
         }
-        .padding()
     }
 }
 
